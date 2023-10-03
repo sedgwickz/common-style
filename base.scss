@@ -1,0 +1,290 @@
+$size: 4px;
+
+// TODO gutter
+// @for $i from 1 through 8 {
+//   .g-#{$i} {
+//     uni-view + uni-view {
+//       margin-left: calc($size * $i) !important;
+//       uni-view {
+//         margin-left: 0;
+//       }
+//     }
+//   }
+// }
+
+// font-size
+@for $i from 1 through 64 {
+  .f-#{$i} {
+    font-size: calc(1px * $i);
+  }
+}
+
+// font-weight
+@for $i from 1 through 8 {
+  .fw-#{$i * 100} {
+    font-weight: 100 * $i;
+  }
+}
+
+// opacity
+@for $i from 1 through 8 {
+  .opacity-#{$i} {
+    opacity: $i;
+  }
+}
+
+// width & height & padding & margin
+@for $i from 0 through 64 {
+  .w-#{$i} {
+    width: calc($size * $i);
+  }
+
+  // .max-w-#{$i} {
+  //   max-width: calc($size * $i);
+  // }
+
+  // .min-w-#{$i} {
+  //   min-width: calc($size * $i);
+  // }
+
+  .h-#{$i} {
+    height: calc($size * $i);
+  }
+
+  // .max-h-#{$i} {
+  //   max-height: calc($size * $i);
+  // }
+
+  // .min-h-#{$i} {
+  //   min-height: calc($size * $i);
+  // }
+
+  .m-#{$i} {
+    margin: calc($size * $i);
+  }
+
+  .mt-#{$i} {
+    margin-top: calc($size * $i);
+  }
+  .mr-#{$i} {
+    margin-right: calc($size * $i);
+  }
+  .mb-#{$i} {
+    margin-bottom: calc($size * $i);
+  }
+  .ml-#{$i} {
+    margin-left: calc($size * $i);
+  }
+  .mx-#{$i} {
+    @extend .ml-#{$i};
+    @extend .mr-#{$i};
+  }
+  .my-#{$i} {
+    @extend .mt-#{$i};
+    @extend .mb-#{$i};
+  }
+
+  .p-#{$i} {
+    margin: calc($size * $i);
+  }
+
+  .pt-#{$i} {
+    padding-top: calc($size * $i);
+  }
+  .pr-#{$i} {
+    padding-right: calc($size * $i);
+  }
+  .pb-#{$i} {
+    padding-bottom: calc($size * $i);
+  }
+  .pl-#{$i} {
+    padding-left: calc($size * $i);
+  }
+  .px-#{$i} {
+    @extend .pl-#{$i};
+    @extend .pr-#{$i};
+  }
+  .py-#{$i} {
+    @extend .pt-#{$i};
+    @extend .pb-#{$i};
+  }
+
+  // minus
+  .-m-#{$i} {
+    margin: calc($size * $i);
+  }
+
+  .-mt-#{$i} {
+    margin-top: calc(0px - $size * $i);
+  }
+  .-mr-#{$i} {
+    margin-right: calc(0px - $size * $i);
+  }
+  .-mb-#{$i} {
+    margin-bottom: calc(0px - $size * $i);
+  }
+  .-ml-#{$i} {
+    margin-left: calc(0px - $size * $i);
+  }
+  .-mx-#{$i} {
+    @extend .-ml-#{$i};
+    @extend .-mr-#{$i};
+  }
+  .-my-#{$i} {
+    @extend .-mt-#{$i};
+    @extend .-mb-#{$i};
+  }
+
+  .-p-#{$i} {
+    margin: calc(0px - $size * $i);
+  }
+
+  .-pt-#{$i} {
+    padding-top: calc(0px - $size * $i);
+  }
+  .-pr-#{$i} {
+    padding-right: calc(0px - $size * $i);
+  }
+  .-pb-#{$i} {
+    padding-bottom: calc(0px - $size * $i);
+  }
+  .-pl-#{$i} {
+    padding-left: calc(0px - $size * $i);
+  }
+  .-px-#{$i} {
+    @extend .-pl-#{$i};
+    @extend .-pr-#{$i};
+  }
+  .-py-#{$i} {
+    @extend .-pt-#{$i};
+    @extend .-pb-#{$i};
+  }
+
+  .b-#{$i} {
+    border-radius: calc($size * $i);
+  }
+
+  .left-#{$i} {
+    left: calc($size * $i);
+  }
+  .right-#{$i} {
+    right: calc($size * $i);
+  }
+  .top-#{$i} {
+    top: calc($size * $i);
+  }
+  .bottom-#{$i} {
+    bottom: calc($size * $i);
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.flex-center {
+  @extend .align-center;
+  @extend .justify-center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.white {
+  color: white;
+}
+
+.dark {
+  color: black;
+}
+
+.b50 {
+  border-radius: 50%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.shadow-inner {
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+
+.shadow-none {
+  box-shadow: 0 0 #0000;
+}
