@@ -1,0 +1,54 @@
+@import 'constant.scss';
+
+// gutter
+@for $i from 1 through 8 {
+  .g-#{$i},
+  .gx-#{$i} {
+    & > div + div {
+      margin-left: calc($size * $i);
+    }
+  }
+
+  .gy-#{$i} {
+    & > div + div {
+      margin-top: calc($size * $i);
+    }
+  }
+}
+
+.max-w100 {
+  max-width: 100%;
+}
+
+.max-h100 {
+  max-height: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.scroll {
+  overflow: auto;
+}
+
+.scroll-x {
+  overflow-x: auto;
+}
+
+.scroll-y {
+  overflow-y: auto;
+}
+
+.mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+}

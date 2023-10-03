@@ -1,2 +1,19 @@
 @import 'base.scss';
 @import 'colors.scss';
+
+@include basic('');
+@media (min-width: 640px) {
+  @include basic(sm_);
+}
+
+@media (min-width: 768px) {
+  @include basic(md_);
+}
+
+@media (min-width: 1024px) {
+  @include basic(lg_);
+}
+
+@media (min-width: 1280px) {
+  @include basic(xl_);
+}
