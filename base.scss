@@ -54,7 +54,7 @@
     }
 
     .#{$media}p-#{$i} {
-      margin: calc($size * $i);
+      padding: calc($size * $i);
     }
 
     .#{$media}pt-#{$i} {
@@ -235,7 +235,7 @@
   }
 
   // z-index
-  @for $i from 1 through 9999 {
+  @for $i from 1 through 10 {
     .#{$media}z-#{$i} {
       z-index: $i;
     }
