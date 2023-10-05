@@ -105,7 +105,7 @@
     }
 
     .#{$media}-p-#{$i} {
-      margin: calc(0px - $size * $i);
+      padding: calc(0px - $size * $i);
     }
 
     .#{$media}-pt-#{$i} {
