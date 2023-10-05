@@ -172,3 +172,74 @@ $blue-colors: (
     background-color: $color;
   }
 }
+
+$yellow-50: #fefce8;
+$yellow-100: #fef9c3;
+$yellow-200: #fef08a;
+$yellow-300: #fde047;
+$yellow-400: #facc15;
+$yellow-500: #eab308;
+$yellow-600: #ca8a04;
+$yellow-700: #a16207;
+$yellow-800: #854d0e;
+$yellow-900: #713f12;
+$yellow-950: #052e16;
+
+$yellow-colors: (
+  50: $yellow-50,
+  100: $yellow-100,
+  200: $yellow-200,
+  300: $yellow-300,
+  400: $yellow-400,
+  500: $yellow-500,
+  600: $yellow-600,
+  700: $yellow-700,
+  800: $yellow-800,
+  900: $yellow-900,
+  950: $yellow-950,
+);
+
+@each $name, $color in $yellow-colors {
+  .yellow-#{$name} {
+    color: $color;
+  }
+  .yellow-#{$name}-bg {
+    background-color: $color;
+  }
+}
+
+$pink-50: #fdf2f8;
+$pink-100: #fce7f3;
+$pink-200: #fbcfe8;
+$pink-300: #f9a8d4;
+$pink-400: #f472b6;
+$pink-500: #ec4899;
+$pink-600: #db2777;
+$pink-700: #be185d;
+$pink-800: #9d174d;
+$pink-900: #831843;
+$pink-950: #052e16;
+
+$pink-colors: (
+  50: $pink-50,
+  100: $pink-100,
+  200: $pink-200,
+  300: $pink-300,
+  400: $pink-400,
+  500: $pink-500,
+  600: $pink-600,
+  700: $pink-700,
+  800: $pink-800,
+  900: $pink-900,
+  950: $pink-950,
+);
+
+@each $name, $color in $pink-colors {
+  .pink-#{$name} {
+    color: $color;
+  }
+  .pink-#{$name}-bg {
+    background-color: $color;
+  }
+}
+
