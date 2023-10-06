@@ -60,6 +60,34 @@
   .#{$media}inline {
     display: inline;
   }
+
+  .#{$media}h-after-line {
+    &::after {
+      position: absolute;
+      content: ' ';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: $gray-100;
+    }
+  }
+
+  .#{$media}h-after-border {
+    &::after {
+      content: ' ';
+      width: 200%;
+      height: 200%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      transform: scale(0.5);
+      transform-origin: 0 0;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+  }
 }
 
 @include advance('');
@@ -78,4 +106,3 @@
 @media (min-width: 1280px) {
   @include advance(xl_);
 }
-

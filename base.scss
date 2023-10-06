@@ -1,4 +1,5 @@
 @import 'constant.scss';
+@import 'colors.scss';
 
 @mixin basic($media) {
   // font-weight
@@ -202,12 +203,32 @@
     background-color: black;
   }
 
+  @for $i from 1 through 9 {
+    .#{$media}bg-white-#{$i} {
+      background-color: rgb(255, 255, 255, $i * 0.1);
+    }
+
+    .#{$media}bg-dark-#{$i} {
+      background-color: rgb(0, 0, 0, $i * 0.1);
+    }
+  }
+
   .#{$media}white {
     color: white;
   }
 
   .#{$media}dark {
     color: black;
+  }
+
+  @for $i from 1 through 9 {
+    .#{$media}white-#{$i} {
+      color: rgb(255, 255, 255, $i * 0.1);
+    }
+
+    .#{$media}dark-#{$i} {
+      color: rgb(0, 0, 0, $i * 0.1);
+    }
   }
 
   .#{$media}b50 {
@@ -232,6 +253,15 @@
 
   .#{$media}fixed {
     position: fixed;
+  }
+
+  .#{$media}ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 1;
+    // -webkit-box-orient: vertical;
   }
 
   // z-index
@@ -265,4 +295,6 @@
   .#{$media}shadow-none {
     box-shadow: 0 0 #0000;
   }
+
+
 }
