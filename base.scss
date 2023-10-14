@@ -265,7 +265,7 @@
   }
 
   // z-index
-  @for $i from 1 through 10 {
+  @for $i from 1 through 1000 {
     .#{$media}z-#{$i} {
       z-index: $i;
     }
