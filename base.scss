@@ -150,6 +150,11 @@
 
   .#{$media}flex {
     display: flex;
+    flex-direction: row;
+  }
+
+  .#{$media}flex-wrap {
+    flex-wrap: wrap;
   }
 
   .#{$media}flex-column {
@@ -259,9 +264,9 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    // display: -webkit-box;
-    // -webkit-line-clamp: 1;
-    // -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 
   // z-index
